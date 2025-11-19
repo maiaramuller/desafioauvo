@@ -1,10 +1,10 @@
 # Desafio QA Auvo - POC Automação Web
 
-[cite_start]Este projeto é uma Prova de Conceito (POC) de automação de testes web, desenvolvida como parte do processo seletivo da Auvo[cite: 1]. [cite_start]O objetivo é validar o fluxo crítico de compra (E2E) no site de e-commerce fictício [SauceDemo](https://www.saucedemo.com/)[cite: 2].
+Este projeto é uma Prova de Conceito (POC) de automação de testes web, desenvolvida como parte do processo seletivo da Auvo. O objetivo é validar o fluxo crítico de compra (E2E) no site de e-commerce fictício [SauceDemo](https://www.saucedemo.com/).
 
 ## 🛠️ Tecnologias Utilizadas
 
-[cite_start]O projeto foi construído seguindo os requisitos do desafio[cite: 10, 11]:
+O projeto foi construído seguindo os requisitos do desafio:
 
 - **Linguagem:** JavaScript
 - **Framework de Teste:** Playwright
@@ -42,7 +42,7 @@ Siga os passos abaixo para configurar o ambiente localmente:
 
 ## 🏗️ Estrutura do Projeto (Page Object Model)
 
-[cite_start]O projeto segue estritamente o padrão **Page Object Model (POM)** para garantir organização, reutilização de código e facilidade de manutenção[cite: 12, 19].
+O projeto segue estritamente o padrão **Page Object Model (POM)** para garantir organização, reutilização de código e facilidade de manutenção[cite: 12, 19].
 
 ```text
 desafio-auvo-playwright/
