@@ -17,7 +17,6 @@ exports.ProductsPage = class ProductsPage {
     this.cartLink = page.locator('[data-test="shopping-cart-link"]');
 
     // Localizador para o contêiner de um item de inventário
-    // Usamos isso como base para encontrar elementos filhos
     this.productContainer = page.locator('[data-test="inventory-item"]');
   }
 
@@ -25,7 +24,6 @@ exports.ProductsPage = class ProductsPage {
 
   /**
    * Retorna o contêiner de um produto específico, filtrando pelo nome.
-   * Este é um método "helper" que usaremos em outras funções.
    * @param {string} productName - O nome exato do produto (ex: "Sauce Labs Backpack")
    * @returns {import('@playwright/test').Locator}
    */
@@ -61,9 +59,7 @@ exports.ProductsPage = class ProductsPage {
    * @param {string} productName - O nome do produto
    */
   async addProductToCart(productName) {
-    // O site saucedemo usa um 'data-test' dinâmico para os botões.
-    // Ex: "add-to-cart-sauce-labs-backpack"
-    // Precisamos formatar o nome do produto para esse padrão:
+    // Constrói o seletor dinâmico baseado no nome do produto
     const dataTestSelector = `add-to-cart-${productName
       .toLowerCase()
       .replace(/ /g, "-")}`;

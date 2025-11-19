@@ -10,6 +10,7 @@ O projeto foi construído seguindo os requisitos do desafio:
 - **Framework de Teste:** Playwright
 - **Runtime:** Node.js
 - **Arquitetura:** Page Object Model (POM)
+- **Estrutura de Teste:** BDD (Behavior Driven Development) para documentação
 
 ## 📋 Pré-requisitos
 
@@ -42,10 +43,12 @@ Siga os passos abaixo para configurar o ambiente localmente:
 
 ## 🏗️ Estrutura do Projeto (Page Object Model)
 
-O projeto segue estritamente o padrão **Page Object Model (POM)** para garantir organização, reutilização de código e facilidade de manutenção[cite: 12, 19].
+O projeto segue estritamente o padrão **Page Object Model (POM)** para garantir organização, reutilização de código e facilidade de manutenção.
 
 ```text
 desafio-auvo-playwright/
+├── 📁 Cenários de teste/
+│   └── README.md              # Documentação dos cenários em Gherkin (BDD)
 ├── 📁 pages/                  # Classes representando as páginas da aplicação
 │   ├── LoginPage.js           # Login
 │   ├── ProductsPage.js        # Listagem e seleção de produtos
@@ -53,9 +56,9 @@ desafio-auvo-playwright/
 │   ├── CheckoutInfoPage.js    # Dados de entrega
 │   ├── CheckoutOverviewPage.js# Resumo do pedido
 │   └── CheckoutCompletePage.js# Finalização
-├── 📁 tests/                  # Arquivos de teste (Specs)
-│   └── e2e-saucedemo.spec.js  # Teste E2E cobrindo o fluxo completo
-├── 📁 playwright-report/      # Relatórios gerados automaticamente
+├── 📁 tests/                  # Scripts de Teste
+│   ├── e2e-saucedemo.spec.js  # Fluxo Principal de Compra (Happy Path)
+│   └── login-scenarios.spec.js # Cenários Bônus (Tratamento de Erros)
 ├── 📄 playwright.config.js    # Configurações globais do Playwright
 └── 📄 README.md               # Documentação do projeto
 ```
